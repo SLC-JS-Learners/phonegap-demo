@@ -1,7 +1,7 @@
 var customCamera = {
 
 	takeShot: function() {
-		console.log('takeShot called')
+		alert('takeShot called')
 		navigator.camera.getPicture(onSuccess, onFail, {
 			quality        : 50,
 			destinationType: Camera.DestinationType.FILE_URI
@@ -11,11 +11,11 @@ var customCamera = {
 	onSuccess: function(imageURI) {
 		var image = document.getElementById('myImage');
 		image.src = imageURI;
-		console.log('Success.  image.src: ' + image.src);
+		alert('Success.  image.src: ' + image.src);
 	},
 
 	onFail: function(message) {
-		console.log('Failed because: ' + message);
+		alert('Failed because: ' + message);
 	}
 
 };
